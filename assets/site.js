@@ -1,5 +1,6 @@
 
 const d=document,b=d.body,$=(s,r=d)=>[...r.querySelectorAll(s)],ready=()=>b.classList.add('ready');
+const year=d.querySelector('footer .sm');if(year)year.textContent=year.textContent.replace(/\d{4}/,String(new Date().getFullYear()));
 const hero=d.querySelector('.hero');let seen=0;try{seen=sessionStorage.getItem('p')}catch(e){}
 if(hero&&!seen){const p=d.createElement('div');p.id='pre';p.innerHTML='<div><svg class="ic"><use href="#drop"/></svg><b>0%</b></div>';b.append(p);let n=0;const t=setInterval(()=>{n=Math.min(100,n+1+Math.floor(Math.random()*8));p.querySelector('b').textContent=n+'%';if(n>=100){clearInterval(t);setTimeout(()=>{p.classList.add('done');ready();setTimeout(()=>p.remove(),1100);try{sessionStorage.setItem('p',1)}catch(e){}},250)}},45)}else ready();
 const h=d.querySelector('header'),sc=()=>h.classList.toggle('sc',scrollY>40||!hero);sc();addEventListener('scroll',sc,{passive:true});
