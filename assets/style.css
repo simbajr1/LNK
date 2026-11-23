@@ -2063,6 +2063,14 @@ footer {
 }
 
 @media (max-width: 760px) {
+  header:not(.sc) .nav ul a,
+  header.sc .nav ul a,
+  .nav ul a,
+  .nav ul a.on,
+  .open .nav ul a,
+  .open .nav ul a.on {
+    color: #fff;
+  }
   .open header,
   .open header.sc,
   .open header .nav,
