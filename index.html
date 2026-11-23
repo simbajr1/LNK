@@ -172,15 +172,16 @@
     <main>
       <section class="hero">
         <img
-          src="assets/img/hero.jpg"
-          alt="Loise Nduku Kitulu presenting at the AFRETEC Doctoral Academy"
+          src="assets/img/tap-conservation-hero.png"
+          alt="Hands catching water from a tap in the sunlight"
         />
         <div class="w">
           <span class="pill" data-r><i></i>PhD Researcher, University of Lagos</span>
+          <svg class="hero-mark ic" aria-hidden="true"><use href="#drop" /></svg>
           <h1>
             <span class="ln"
               ><span class="hero-name" style="--i: 0"
-                >Loise Nduku <b class="name-kitulu">Kitulu</b></span
+                ><span>Loise Nduku </span><b class="name-kitulu">Kitulu</b></span
               ></span
             >
           </h1>
@@ -201,11 +202,17 @@
               ><b class="in">in</b>LinkedIn</a
             >
           </div>
+          <div class="hero-socials" aria-label="Social links">
+            <a href="https://www.linkedin.com/in/loise-kitulu-929b941b9/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+            <a href="mailto:kitululoise@gmail.com" aria-label="Email">✉</a>
+          </div>
         </div>
       </section>
       <section id="about">
         <div class="w about">
           <div>
+            <p class="section-no" data-r>01.</p>
+            <p class="section-kicker" data-r>About</p>
             <h2 data-r>Hi, I’m Loise Nduku Kitulu</h2>
             <p data-r>
               I am an Urban and Regional Planner and PhD researcher at the University of Lagos,
@@ -218,26 +225,72 @@
       </section>
       <section class="alt">
         <div class="w">
+          <p class="section-no" data-r>02.</p>
+          <p class="section-kicker" data-r>Expertise</p>
           <h2 data-r>Integrating water systems for sustainable urban development</h2>
-          <div class="row" data-r>
-            <svg class="ic"><use href="#drop" /></svg><b>Water and wastewater management</b>
-          </div>
-          <div class="row" data-r>
-            <svg class="ic"><use href="#loop" /></svg><b>Circular economy</b>
-          </div>
-          <div class="row" data-r>
-            <svg class="ic"><use href="#city" /></svg><b>Urban planning and governance</b>
-          </div>
-          <div class="row" data-r>
-            <svg class="ic"><use href="#leaf" /></svg><b>Environmental sustainability</b>
-          </div>
-          <div class="row" data-r>
-            <svg class="ic"><use href="#chart" /></svg><b>Policy and implementation</b>
+          <div class="expertise-grid">
+            <article class="expertise-card" data-r>
+              <span class="expertise-number">01</span>
+              <span class="expertise-icon">
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#drop" />
+                </svg>
+              </span>
+              <h3>Water and wastewater management</h3>
+              <p>Resilient water systems, reuse and wastewater infrastructure for growing African cities.</p>
+              <span class="expertise-line"></span>
+            </article>
+            <article class="expertise-card" data-r>
+              <span class="expertise-number">02</span>
+              <span class="expertise-icon">
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#loop" />
+                </svg>
+              </span>
+              <h3>Circular economy</h3>
+              <p>Resource recovery and circular approaches for more sustainable urban systems.</p>
+              <span class="expertise-line"></span>
+            </article>
+            <article class="expertise-card" data-r>
+              <span class="expertise-number">03</span>
+              <span class="expertise-icon">
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#city" />
+                </svg>
+              </span>
+              <h3>Urban planning and governance</h3>
+              <p>Planning frameworks that connect infrastructure, policy and inclusive development.</p>
+              <span class="expertise-line"></span>
+            </article>
+            <article class="expertise-card" data-r>
+              <span class="expertise-number">04</span>
+              <span class="expertise-icon">
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#leaf" />
+                </svg>
+              </span>
+              <h3>Environmental sustainability</h3>
+              <p>Climate-responsive places that protect ecosystems and strengthen communities.</p>
+              <span class="expertise-line"></span>
+            </article>
+            <article class="expertise-card expertise-wide" data-r>
+              <span class="expertise-number">05</span>
+              <span class="expertise-icon">
+                <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+                  <use href="#chart" />
+                </svg>
+              </span>
+              <h3>Policy and implementation</h3>
+              <p>Translating research evidence into practical policy, planning and implementation pathways.</p>
+              <span class="expertise-line"></span>
+            </article>
           </div>
         </div>
       </section>
       <section>
         <div class="w">
+          <p class="section-no" data-r>03.</p>
+          <p class="section-kicker" data-r>Work</p>
           <h2 data-r>Fellowships and projects</h2>
           <a class="row" href="projects.html#afriak" data-cur="Open" data-r
             ><svg class="ic"><use href="#globe" /></svg><b>AFRIAK Fellowship</b
@@ -258,6 +311,8 @@
       </section>
       <section class="dark">
         <div class="w">
+          <p class="section-no" data-r>04.</p>
+          <p class="section-kicker" data-r>Impact</p>
           <h2 data-r>Building water-secure, resilient and inclusive cities</h2>
           <div class="tri">
             <div data-r>
@@ -277,6 +332,8 @@
       </section>
       <section id="publications">
         <div class="w">
+          <p class="section-no" data-r>05.</p>
+          <p class="section-kicker" data-r>Publications</p>
           <h2 data-r>Research and publications</h2>
           <a
             class="pub"
