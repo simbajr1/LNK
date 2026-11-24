@@ -670,7 +670,7 @@ footer p {
 #cur.on {
   scale: 1;
 }
-@media (max-width: 860px) {
+@media (max-width: 720px) {
   .mb {
     display: block;
   }
@@ -711,6 +711,8 @@ footer p {
   .open header .lg .ic {
     color: #fff;
   }
+}
+@media (max-width: 860px) {
   .about {
     grid-template-columns: 1fr;
   }
@@ -824,7 +826,7 @@ h3 {
 .event {
   margin-top: 44px;
 }
-@media (max-width: 860px) {
+@media (max-width: 720px) {
   .nav {
     padding: 12px 16px;
   }
@@ -844,6 +846,8 @@ h3 {
   .nav ul a {
     font-size: 1.45rem;
   }
+}
+@media (max-width: 860px) {
   .it {
     height: clamp(175px, 48vw, 260px);
   }
@@ -934,7 +938,7 @@ p,
   }
 }
 /* Fully off-canvas mobile navigation, including its background */
-@media (max-width: 860px) {
+@media (max-width: 720px) {
   header {
     z-index: 80;
   }
@@ -1138,7 +1142,7 @@ p,
 }
 
 /* ===== Mobile menu: hamburger on the left, drawer slides from the left ===== */
-@media (max-width: 860px) {
+@media (max-width: 720px) {
   .nav {
     justify-content: flex-start;
     gap: 6px;
@@ -1444,7 +1448,7 @@ p,
     max-height: 460px;
   }
 }
-@media (max-width: 860px) {
+@media (max-width: 720px) {
   .open header .lg {
     visibility: hidden;
   }
@@ -2068,7 +2072,7 @@ footer {
   background: #04102e;
 }
 
-@media (max-width: 760px) {
+@media (max-width: 720px) {
   header:not(.sc) .nav ul a,
   header.sc .nav ul a,
   .nav ul a,
@@ -2101,6 +2105,8 @@ footer {
   header .nav {
     padding: 0 10px;
   }
+}
+@media (max-width: 760px) {
   .hero {
     height: auto;
     min-height: 100svh;
@@ -2213,4 +2219,96 @@ footer {
 .conference-highlights h3,
 .conference-highlights h4 {
   color: var(--n);
+}
+
+/* Homepage image placements */
+section[id] {
+  scroll-margin-top: 76px;
+}
+.hero {
+  height: calc(100svh - 76px);
+  min-height: 580px;
+}
+.hero > img {
+  object-position: 58% 50%;
+}
+#about {
+  padding: clamp(56px, 8vw, 96px) 0;
+  background: #fff;
+}
+.about {
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.9fr);
+}
+.about-image {
+  min-height: 340px;
+  border-radius: 20px;
+  background: url("img/water-hands.png") 54% center / cover;
+  box-shadow: 0 20px 48px rgba(7, 27, 70, 0.14);
+}
+.expertise {
+  background:
+    linear-gradient(rgba(238, 247, 247, 0.76), rgba(238, 247, 247, 0.76)),
+    url("img/water-metrics.png") center 52% / cover;
+}
+.expertise-card,
+.expertise-wide {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.96), rgba(238, 247, 247, 0.88)),
+    #fff;
+}
+.contact-compact {
+  background:
+    linear-gradient(90deg, rgba(7, 27, 70, 0.94), rgba(7, 27, 70, 0.76)),
+    url("img/water-tap-sunset.png") center 48% / cover;
+}
+@media (max-width: 760px) {
+  section[id] {
+    scroll-margin-top: 68px;
+  }
+  .hero {
+    height: calc(100svh - 68px);
+    min-height: 520px;
+    margin-top: 68px;
+  }
+  .hero > img {
+    object-position: 64% 50%;
+  }
+  .about-image {
+    min-height: 240px;
+  }
+}
+@media (max-width: 860px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (min-width: 721px) and (max-width: 860px) {
+  .nav {
+    gap: 12px;
+    padding: 0 16px;
+  }
+  .lg {
+    flex: none;
+    gap: 6px;
+    font-size: clamp(0.86rem, 1.35vw, 1.05rem);
+  }
+  .lg .ic {
+    width: 1.35em;
+    height: 1.35em;
+  }
+  .mb {
+    display: none;
+  }
+  .nav .btn {
+    display: inline-flex;
+  }
+  .nav ul {
+    flex: none;
+    gap: clamp(7px, 1.1vw, 13px);
+  }
+  .nav ul a {
+    font-size: clamp(0.72rem, 0.95vw, 0.82rem);
+    white-space: nowrap;
+  }
 }
