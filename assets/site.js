@@ -83,11 +83,11 @@ if (d.querySelector(".phd-dark")) {
     const track = event.querySelector(".tr");
     if (!heading || !track) return;
     if (heading.textContent.includes("AFRETEC")) {
-      if (!track.querySelector('source[src="assets/video/PhD proposal presentation.mp4"]')) {
+      if (!track.querySelector('source[src="/assets/video/PhD proposal presentation.mp4"]')) {
         track.prepend(
           makeVideoCard(
-            "assets/img/afretec-2.jpg",
-            "assets/video/PhD proposal presentation.mp4",
+            "/assets/img/afretec-2.jpg",
+            "/assets/video/PhD proposal presentation.mp4",
             "PhD proposal presentation",
             "Presenting the PhD proposal and outlining the research approach for integrating wastewater as an alternative water source in Lagos and Nairobi.",
           ),
@@ -95,11 +95,11 @@ if (d.querySelector(".phd-dark")) {
       }
     }
     if (heading.textContent.includes("Liverpool")) {
-      if (!track.querySelector('source[src="assets/video/Liverpool conference.mp4"]')) {
+      if (!track.querySelector('source[src="/assets/video/Liverpool conference.mp4"]')) {
         track.prepend(
           makeVideoCard(
-            "assets/img/liverpool-1.jpg",
-            "assets/video/Liverpool conference.mp4",
+            "/assets/img/liverpool-1.jpg",
+            "/assets/video/Liverpool conference.mp4",
             "Liverpool conference",
             "A video highlight from the Liverpool Early Career Researchers Conference 2026, featuring the presentation and discussion on urban water systems and coastal urbanism.",
           ),
