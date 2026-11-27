@@ -1380,72 +1380,96 @@ p,
 .afx-sec {
   padding: clamp(40px, 6vw, 80px) 0;
 }
-.afx {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-  gap: clamp(28px, 5vw, 72px);
-  align-items: center;
-  padding: clamp(28px, 4vw, 52px) 0;
+.afriak-project {
+  max-width: 900px;
+  padding: clamp(22px, 4vw, 40px);
+  border: 1px solid var(--l);
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 16px 42px rgba(6, 21, 74, 0.07);
 }
-.afx + .afx {
+.afriak-kicker {
+  color: var(--b);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.afriak-project h2,
+.afriak-workshop h2 {
+  max-width: 28ch;
+}
+.afriak-summary {
+  max-width: 60ch;
+  color: var(--t);
+  line-height: 1.65;
+}
+.afriak-facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 16px;
+  margin: 24px 0 0;
+}
+.afriak-facts div {
+  padding-top: 12px;
   border-top: 1px solid var(--l);
 }
-.afx:nth-child(even) .afx-m {
-  order: -1;
-}
-.afx-t .num {
-  display: inline-block;
-  font-size: 0.8rem;
-  font-weight: 700;
+.afriak-facts dt {
   color: var(--b);
-  letter-spacing: 0.08em;
-  margin-bottom: 10px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
 }
-.afx-t h2 {
-  font-size: clamp(1.4rem, 2.8vw, 2.1rem);
-  margin: 0 0 14px;
-  max-width: none;
-}
-.afx-t p {
-  margin: 0;
+.afriak-facts dd {
+  margin: 5px 0 0;
   color: var(--t);
-  font-size: 1rem;
-  line-height: 1.65;
-  max-width: 52ch;
+  font-size: 0.88rem;
+  line-height: 1.5;
 }
-.afx-m {
-  min-width: 0;
-  display: flex;
-  justify-content: center;
+.afriak-workshop {
+  margin-top: clamp(44px, 7vw, 78px);
 }
-.afx-m img,
-.afx-m video {
-  width: 100%;
-  height: auto;
-  border-radius: 18px;
+.afriak-workshop-head {
+  margin-bottom: 22px;
+}
+.afriak-workshop-head h2 {
+  margin: 8px 0;
+}
+.afriak-workshop-head p {
+  color: var(--t);
+}
+.afriak-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.afriak-gallery figure {
+  aspect-ratio: 4 / 3;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 14px;
   background: var(--m);
-  box-shadow: 0 14px 40px rgba(6, 21, 74, 0.15);
+  box-shadow: 0 12px 30px rgba(6, 21, 74, 0.12);
 }
-.afx-m.p img {
-  width: auto;
-  max-width: 100%;
-  max-height: 560px;
-}
-.afx-m.l img,
-.afx-m.v video {
-  max-height: 480px;
+.afriak-gallery img,
+.afriak-gallery video {
+  display: block;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
 }
+.afriak-gallery video {
+  background: #071b46;
+}
 @media (max-width: 760px) {
-  .afx {
-    grid-template-columns: minmax(0, 1fr);
-    gap: 20px;
+  .afriak-gallery {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
   }
-  .afx:nth-child(even) .afx-m {
-    order: 0;
-  }
-  .afx-m.p img {
-    max-height: 460px;
+}
+@media (max-width: 460px) {
+  .afriak-gallery {
+    grid-template-columns: 1fr;
   }
 }
 @media (max-width: 720px) {
@@ -1558,6 +1582,12 @@ p,
   border: 1px solid var(--l);
   border-radius: 18px;
   padding: clamp(18px, 2.2vw, 26px);
+}
+.conference-note-feature {
+  grid-column: 1 / -1;
+}
+.conference-note-feature p {
+  max-width: 88ch;
 }
 .conference-note h3 {
   font-size: clamp(1.1rem, 1.8vw, 1.4rem);
@@ -1746,6 +1776,29 @@ header.sc .nav ul a {
   object-fit: cover;
   object-position: 50% 52%;
   filter: saturate(0.86) brightness(0.88);
+}
+.hero-portrait {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  right: clamp(36px, 8vw, 128px);
+  width: clamp(350px, 38vw, 500px);
+  aspect-ratio: 1;
+  transform: translateY(-50%);
+}
+.hero-portrait img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: 50% 40%;
+  box-shadow:
+    0 0 0 1px rgba(238, 247, 247, 0.38),
+    0 20px 56px rgba(4, 12, 38, 0.24);
+}
+.about-mobile-portrait {
+  display: none;
 }
 .hero .w {
   max-width: 1200px;
@@ -2118,6 +2171,12 @@ footer {
     object-position: 58% 50%;
     background: transparent;
   }
+  .hero-portrait {
+    top: 36%;
+    right: clamp(22px, 8vw, 58px);
+    width: clamp(145px, 40vw, 210px);
+    transform: translateY(-50%);
+  }
   .hero .w {
     padding: 108px 10px 52px;
   }
@@ -2278,6 +2337,27 @@ section[id] {
   }
 }
 @media (max-width: 860px) {
+  .about {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1000px) {
+  .hero-portrait,
+  .about-image {
+    display: none;
+  }
+  .about-mobile-portrait {
+    display: block;
+    width: min(100%, 360px);
+    aspect-ratio: 1;
+    margin: 24px 0;
+    border: 6px solid var(--m);
+    border-radius: 20px;
+    object-fit: cover;
+    object-position: 50% 40%;
+    box-shadow: 0 18px 42px rgba(7, 27, 70, 0.16);
+  }
   .about {
     grid-template-columns: 1fr;
   }
