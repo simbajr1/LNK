@@ -2501,9 +2501,9 @@ section[id] {
     grid-column: 1;
   }
   #about .about-image {
-    grid-row: 1;
+    grid-row: 2;
   }
   #about .about > div:first-child {
-    grid-row: 2;
+    grid-row: 1;
   }
 }
