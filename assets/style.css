@@ -2411,10 +2411,13 @@ section[id] {
 }
 #about .about {
   position: relative;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1fr);
   align-items: center;
   gap: clamp(24px, 5vw, 70px);
 }
 #about .about > div:first-child {
+  grid-column: 2;
+  grid-row: 1;
   position: relative;
   z-index: 1;
   padding: clamp(20px, 3vw, 34px);
@@ -2426,14 +2429,16 @@ section[id] {
 #about .about > div:first-child::before {
   content: "";
   position: absolute;
-  top: -1px;
-  left: -1px;
-  width: 44%;
-  height: 3px;
+  top: 0;
+  left: 0;
+  width: 48%;
+  height: 2px;
   border-radius: 20px 0 0;
   background: var(--accent);
 }
 #about .about-image {
+  grid-column: 1;
+  grid-row: 1;
   display: block;
   position: relative;
   z-index: 1;
@@ -2455,6 +2460,22 @@ section[id] {
 #about .about-mobile-portrait {
   display: none;
 }
+.phd-dark > .w:first-child > h2 {
+  max-width: none;
+  font-size: clamp(1.55rem, 2.4vw, 2rem);
+}
+.phd-dark > .w:first-child > h2::before,
+.event .eh h3::before,
+.conference-highlights > .w > h2::before,
+.conference-note h3::before {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 3px;
+  margin-bottom: 12px;
+  border-radius: 999px;
+  background: var(--accent);
+}
 @media (min-width: 1001px) {
   .hero .w {
     padding-right: clamp(320px, 42vw, 520px);
@@ -2469,5 +2490,20 @@ section[id] {
   }
   #about .about-image {
     min-height: 260px;
+  }
+}
+@media (max-width: 860px) {
+  #about .about {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  #about .about > div:first-child,
+  #about .about-image {
+    grid-column: 1;
+  }
+  #about .about-image {
+    grid-row: 1;
+  }
+  #about .about > div:first-child {
+    grid-row: 2;
   }
 }
